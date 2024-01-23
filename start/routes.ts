@@ -20,6 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 import TransactionsController from 'App/Controllers/Http/TransactionsController'
+import HealthCheck from '@ioc:Adonis/Core/HealthCheck'
 
 Route.get('/api', async () => {
   return { hello: 'iControl Dashboard' }

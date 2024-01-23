@@ -12,7 +12,7 @@ export default class Transaction extends BaseModel {
   public type: string
 
   @column()
-  public where: string
+  public description: string
 
   @column()
   public value: string
