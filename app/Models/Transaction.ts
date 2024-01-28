@@ -24,11 +24,17 @@ export default class Transaction extends BaseModel {
   public details: string
 
   @column()
+  public form_payment: string
+
+  @column()
   public status: string
 
+  @column()
+  public user_id: string
+
   @column.dateTime({ autoCreate: true })
-  public createdAt: DateTime
+  public created_at: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
-  public updatedAt: DateTime
+  public updated_at: DateTime
 }

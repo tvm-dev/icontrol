@@ -12,6 +12,7 @@ export default class TransactionsController {
   public async store({ request, response }: HttpContextContract) {
 
     const body = request.body()
+    console.log(body) //apagar
     const transactions = await Transaction.create(body)
     response.status(201)
     return {

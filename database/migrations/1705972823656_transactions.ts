@@ -8,16 +8,13 @@ export default class extends BaseSchema {
       table.increments('id')
       table.string('date', 12).notNullable()
       table.string('type', 20 ).notNullable()
-      table.string('description', 255).notNullable()
+      table.string('description', 100).notNullable()
       table.decimal('value', 10).notNullable()
       table.string('category', 50).notNullable()
       table.string('details', 255)
+      table.string('form_payment', 10).notNullable()
       table.string('status', 10).notNullable()
-
-
-      /**
-       * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
-       */
+      table.string('user_id', 10).notNullable()
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
